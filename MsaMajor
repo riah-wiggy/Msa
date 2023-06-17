@@ -1,0 +1,27 @@
+"""
+display amount due 
+prompt user to enter a coin
+accept 1, 5, 10, and 25 coins
+"""
+def main():
+    amount_due = 50
+    while True:
+        print(f"Amount due: {amount_due}")
+        #prompt user for coin value
+        coin_value = int(input("Enter Coin value "))
+        print(coin_value) 
+        if coin_value not in [1, 5, 10 ,25]:
+            print("Error: Only (1, 5, 10 ,25) coins allowed")
+            continue
+        #update amount_due
+        amount_due = amount_due - coin_value
+
+        if amount_due <= 0:
+            break
+    
+    print(f"Change owed3: {0-amount_due}")
+
+main()
+
+
+    
