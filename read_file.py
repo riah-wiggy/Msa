@@ -1,5 +1,6 @@
 #reading files in python
 #open the file
+#the second leter in the data file if the mode-to read is r- to write is w
 data_file = open("file.txt", "r")
 
 #creat an empty dictionary
@@ -19,4 +20,4 @@ for line_of_data in data_file:
 data_file.close()
 
 for item, price in menu_item.items():
-    print(f"{item}: ${price:.2f}")
+    print(f"{item}: ${price:.2f}") 
