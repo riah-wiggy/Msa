@@ -31,7 +31,7 @@ def ask_question(num1, num2, attempt):
         print("Correct!\n")
         return True
     if attempt == 3:
-        print("wrong!\nCorrect amswer: {num1} + {num2} = {num1+num2}\n")
+        print(f"wrong!\nCorrect answer: {num1} + {num2} = {num1+num2}\n")
         return False
     print("Wrong!\n")
     return ask_question(num1, num2, attempt+1)
