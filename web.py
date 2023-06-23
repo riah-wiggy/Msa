@@ -5,5 +5,5 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=["GET"])
 def index():
-    return "<h1> My name is Riah</h1>"
+    return "<h1 style='color:green'> My name is Riah</h1>"
 app.run()
