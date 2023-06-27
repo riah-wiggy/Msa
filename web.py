@@ -1,6 +1,6 @@
 import flask
 from flask import request, jsonify
-import student_generator_v2
+import student_generator_v2 as sg
 #create an app
 app= flask.Flask(__name__)
 
@@ -14,8 +14,7 @@ app= flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 #load student dictionaries
-student_dictionaries = student_generator_v2.get_student_dictionaries()
-
+student_dictionaries = sg.get_student_dictionaries()
 @app.route('/', methods=["GET"])
 def index():
     return "<h1 style='color:blue; font-size: 500%;'> My name is Riah Wigfall</h1>"
@@ -26,3 +25,5 @@ def api_all():
     return jsonify(student_dictionaries)
 
 app.run()
+#to see on the web write-/api/students/all
+#to download flask type-pip3 install flask
